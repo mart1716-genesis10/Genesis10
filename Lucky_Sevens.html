@@ -1,0 +1,94 @@
+<!--
+Name: Evan Martin
+Date: 2/9/2020
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lucky Sevens</title>
+        <style>
+            table, tr, td {
+                width: 50%;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+        <script type="text/javascript">
+            function rollDice() {
+                return (Math.floor(Math.random()*6) + 1) + (Math.floor(Math.random()*6) + 1);
+            }
+            function Lucky_Sevens(){
+                var bet = document.getElementById("inputBet").value;
+                if(bet <= 0){
+                    window.alert("You must place a bet");
+                }else{
+                    var starting_bet = bet;
+                    var total_rolls = 0;
+                    var highest_money = bet;
+                    var count_at_highest = 0;
+                    while(bet > 0){
+                        total_rolls = total_rolls + 1;
+                        if(rollDice() == 7){
+                            bet = bet + 4;
+                            if(highest_money < bet){
+                                highest_money = bet;
+                                count_at_highest = total_rolls;
+                            }
+                        }else{
+                            bet = bet - 1;
+                        }   
+                    }
+                    document.getElementById("starting_bet").innerText = starting_bet;
+                    document.getElementById("total_rolls").innerText = total_rolls;
+                    document.getElementById("highest_money").innerText = highest_money;
+                    document.getElementById("count_at_highest").innerText = count_at_highest;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h1>Lucky Sevens</h1>
+        <h3>Starting Bet: <input type="number" id="inputBet" placeholder="$0.00"/></h3>
+        <button onclick="Lucky_Sevens();">Play</button>
+        <hr />
+        <div>
+            <h1>Results</h1>
+            <table>
+                <tr>
+                    <td>
+                        Starting Bet
+                    </td>
+                    <td id="starting_bet">
+                        $###.##
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total Rolls Before Going Broke
+                    </td>
+                    <td id="total_rolls">
+                        #
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Highest Amount Won
+                    </td>
+                    <td id="highest_money">
+                        $####.##
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Roll Count at Highest Amount Won
+                    </td>
+                    <td id="count_at_highest">
+                        ###
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </center>
+    </body>
+</html>

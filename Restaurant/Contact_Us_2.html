@@ -1,0 +1,122 @@
+<!--
+Name: Evan Martin
+Date: 2/2/2020
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Dragon Burger Diner</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            h1 {
+                font-family: 'Caesar Dressing', cursive;
+                font-size: very-large;
+            }
+            h3 {
+                font-family: 'Caesar Dressing', cursive;
+                color: #FF0000;
+            }
+            nav a:hover {
+                font-weight: bold;
+            }
+            nav a:active {
+                text-decoration: none;
+            }        
+            nav .btn {
+                background-color: #5b7d87;
+                color: #fef9ff; 
+            }   
+            form label {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <header>
+            Contact Us
+            <hr />
+            <center>
+            <div class="jumbotron">
+                <h1>Dragon Burger Diner</h1>
+                <div id="Events" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h3>We're now opening a new location!</h3>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>We're rolling out our seasonal menu, with special options for this season.</h3>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>The Drink of the Month is Root Beer.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </center>
+        </header>
+        <nav>
+            <hr />
+            <a class="btn badge-pill" href="Dragon_Burger_Diner.html"><i class="fa fa-home"></i></a>
+            <a class="btn badge-pill" href="Menu_2.html">Menu</a>
+            <a class="btn badge-pill" href="Contact_Us_2.html">Contact Us</a>
+        </nav>
+        <article>
+            <hr />
+            <center>
+            <form action="restaurant.html" method="POST">
+                <div class="form-group">
+                    <label>Name: <input type="text" name="Name" required /></label><br />
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="form-group">
+                    <label>Email: <input type="text" name="Email" required /></label><br />
+                </div>
+                <div class="form-group">
+                    <label>Phone: <input type="text" name="Phone" required /></label><br />
+                </div>
+                <div class="form-group">
+                    Reason for Inquiry:
+                    <select name="Reason">
+                        <option value="Catering">Catering</option>
+                        <option value="PrivateParty">Private Party</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Other">Other</option>
+                    </select><br />
+                </div>
+                <div class="form-group">
+                    Additional Information:
+                    <textarea name="AdditionalInformation"></textarea><br />
+                </div>
+                <div class="form-group">
+                    Have You been to the Restaurant?
+                    <input type="radio" name="answer" value="YES" />Yes
+                    <input type="radio" name="answer" value="No" />No<br />
+                </div>
+                <div class="form-group">
+                    Best days to contact you:
+                    <input type="checkbox" name="Day" value="Monday" />M
+                    <input type="checkbox" name="Day" value="Tuesday" />T
+                    <input type="checkbox" name="Day" value="Wednesday" />W
+                    <input type="checkbox" name="Day" value="Thursday" />Th
+                    <input type="checkbox" name="Day" value="Friday" />F<br />
+                </div>
+                <input type="submit" value="Send Request" />
+            </form>
+            </center>
+            <hr />
+        </article>
+        <footer>
+            <center>
+            <p>30th Street, Cedar Ridge, MI, 48329</p>
+            <p>(555)-555-5555</p>
+            </center>
+        </footer>
+    </body>
+</html>
